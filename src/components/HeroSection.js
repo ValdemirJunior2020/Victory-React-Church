@@ -1,30 +1,31 @@
 import React from 'react';
+import { FaFacebook, FaYoutube } from 'react-icons/fa';
 import '../App.css';
-import { Button } from './Button';
 import './HeroSection.css';
 
 function HeroSection() {
   return (
-    <div className='hero-container'>
-      <video src='/videos/video-1.mp4' autoPlay loop muted />
-      <h1>ADVENTURE AWAITS</h1>
-      <p>What are you waiting for?</p>
-      <div className='hero-btns'>
-        <Button
-          className='btns'
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
+    <div className="hero-container">
+      <video src="/videos/worship.mp4" autoPlay loop muted playsInline />
+      <h1>Welcome to Victory Worship  Church</h1>
+      <p>Come visit us!</p>
+      <div className="hero-icons">
+        <a 
+          href="https://www.facebook.com/groups/56003018318" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="social-icon facebook-icon"
         >
-          GET STARTED
-        </Button>
-        <Button
-          className='btns'
-          buttonStyle='btn--primary'
-          buttonSize='btn--large'
-          onClick={console.log('hey')}
+          <FaFacebook />
+        </a>
+        <a 
+          href="https://www.youtube.com/@VictoryWorshipCenter" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="social-icon youtube-icon"
         >
-          WATCH TRAILER <i className='far fa-play-circle' />
-        </Button>
+          <FaYoutube />
+        </a>
       </div>
     </div>
   );

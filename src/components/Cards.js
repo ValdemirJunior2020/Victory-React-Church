@@ -1,46 +1,89 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import './Cards.css';
-import CardItem from './CardItem';
 
 function Cards() {
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  // ✅ Toggle Play/Pause on Click
+  const handleVideoClick = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <div className='cards'>
-      <h1>Check out these EPIC Destinations!</h1>
+      {/* ✅ Full-Screen Video Section */}
+      <div className='video-card'>
+        <video className='full-screen-video' autoPlay loop muted>
+          <source src='/videos/worship.mp4' type='video/mp4' />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      {/* ✅ Cards Section */}
       <div className='cards__container'>
         <div className='cards__wrapper'>
+          {/* ✅ First Card - Video */}
           <ul className='cards__items'>
-            <CardItem
-              src='images/img-9.jpg'
-              text='Explore the hidden waterfall deep inside the Amazon Jungle'
-              label='Adventure'
-              path='/services'
-            />
-            <CardItem
-              src='images/img-2.jpg'
-              text='Travel through the Islands of Bali in a Private Cruise'
-              label='Luxury'
-              path='/services'
-            />
+            <li className="cards__item">
+              <div className="cards__item__link">
+                <figure className="cards__item__pic-wrap" data-category="Experience">
+                  <video
+                    ref={videoRef}
+                    className="cards__item__img"
+                    onClick={handleVideoClick} // ✅ Click to Play/Pause
+                    controls // ✅ Show Play/Pause Button
+                  >
+                    <source src="/videos/sherry.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </figure>
+                <div className="cards__item__info">
+                  <h5 className="cards__item__text">Our Pastor</h5>
+                </div>
+              </div>
+            </li>
           </ul>
+
+          {/* ✅ Second Row of Cards */}
           <ul className='cards__items'>
-            <CardItem
-              src='images/img-3.jpg'
-              text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-              label='Mystery'
-              path='/services'
-            />
-            <CardItem
-              src='images/img-4.jpg'
-              text='Experience Football on Top of the Himilayan Mountains'
-              label='Adventure'
-              path='/products'
-            />
-            <CardItem
-              src='images/img-8.jpg'
-              text='Ride through the Sahara Desert on a guided camel tour'
-              label='Adrenaline'
-              path='/sign-up'
-            />
+            <li className="cards__item">
+              <div className="cards__item__link">
+                <figure className="cards__item__pic-wrap" data-category="Adventure">
+                  <img className="cards__item__img" src="/images/img-9.jpg" alt="Adventure" />
+                </figure>
+                <div className="cards__item__info">
+                  <h5 className="cards__item__text">Explore the hidden waterfall deep inside the Amazon Jungle</h5>
+                </div>
+              </div>
+            </li>
+            <li className="cards__item">
+              <div className="cards__item__link">
+                <figure className="cards__item__pic-wrap" data-category="Mystery">
+                  <img className="cards__item__img" src="/images/img-3.jpg" alt="Mystery" />
+                </figure>
+                <div className="cards__item__info">
+                  <h5 className="cards__item__text">Set Sail in the Atlantic Ocean visiting Uncharted Waters</h5>
+                </div>
+              </div>
+            </li>
+            <li className="cards__item">
+              <div className="cards__item__link">
+                <figure className="cards__item__pic-wrap" data-category="Adventure">
+                  <img className="cards__item__img" src="/images/img-4.jpg" alt="Himalayan Adventure" />
+                </figure>
+                <div className="cards__item__info">
+                  <h5 className="cards__item__text">Experience Football on Top of the Himalayan Mountains</h5>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
