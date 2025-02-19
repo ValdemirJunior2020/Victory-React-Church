@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection"; // ✅ Import HeroSection
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/pages/Home";
@@ -14,10 +13,6 @@ function App() {
   return (
     <Router>
       <Navbar />
-      
-      {/* ✅ Add HeroSection Below Navbar */}
-      <HeroSection /> 
-
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />

@@ -4,6 +4,8 @@ import '../App.css';
 import './HeroSection.css';
 
 function HeroSection() {
+  console.log("Rendering HeroSection");
+
   return (
     <div className="hero-container">
       <video src="/videos/worship.mp4" autoPlay loop muted playsInline />
