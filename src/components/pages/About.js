@@ -54,8 +54,8 @@ function About() {
       {/* ✅ Video Background */}
       <div className="video-container">
         <video autoPlay loop muted playsInline>
-          {/* <source src="https://assets.mixkit.co/videos/52288/52288-720.mp4" type="video/mp4" /> */}
-          Your browser does not support the video tag.
+          
+          Your browser does not support the video tag. 
         </video>
       </div>
 
