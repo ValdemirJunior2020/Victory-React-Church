@@ -45,7 +45,7 @@ Thumbs.db
 # Build and Production Files
 dist/
 build/
-public/
+
 .cache/
 .next/
 out/
@@ -66,3 +66,6 @@ out/
 *.swp
 *.swo
 *.lock
+# Exception for specific files or directories
+!public/videos/
+!public/videos/worship.mp4

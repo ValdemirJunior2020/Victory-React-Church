@@ -14,7 +14,7 @@ function Navbar() {
       <div className="navbar-container">
         {/* ✅ Logo */}
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          Victory Worship Center
+          
         </Link>
 
         {/* ✅ Mobile Menu Icon */}
