@@ -85,3 +85,12 @@ h1 {
 .cards__item__pic-wrap img:hover {
   transform: scale(1.05); /* Hover effect */
 }
+.cards__item__info {
+  display: flex;
+  justify-content: center; /* Centers text horizontally */
+  align-items: center; /* Centers text vertically */
+}
+
+.cards__item__text {
+  text-align: center; /* Ensures text is centered */
+}
