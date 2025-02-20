@@ -30,6 +30,7 @@
 .menu-icon {
   display: none;
   cursor: pointer;
+  z-index: 1001; /* Ensures it stays above other elements */
 }
 
 .nav-menu {
@@ -63,20 +64,36 @@
 
   .nav-menu {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #0329cf;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
   }
 
   .nav-menu.active {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed; /* Makes it stay on top of the page */
     top: 80px;
-    width: 100%;
-    background: #0329cf;
     left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #0329cf;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
   }
 
   .nav-item {
-    text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
+  }
+
+  .nav-links {
+    padding: 15px 20px;
+    font-size: 1.5rem;
   }
 }

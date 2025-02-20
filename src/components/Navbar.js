@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa'; // ✅ Import React Icons
-import './Navbar.css';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa"; // ✅ Import React Icons
+import "./Navbar.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -12,9 +12,9 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* ✅ Logo */}
+        {/* ✅ Logo (Modify this if needed) */}
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          
+          Victory Worship
         </Link>
 
         {/* ✅ Mobile Menu Icon */}
@@ -23,7 +23,7 @@ function Navbar() {
         </div>
 
         {/* ✅ Navbar Menu */}
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
             <Link to="/" className="nav-links" onClick={closeMobileMenu}>
               Home

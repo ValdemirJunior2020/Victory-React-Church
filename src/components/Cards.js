@@ -35,15 +35,15 @@ function Cards() {
             <li className="cards__item">
               <div className="cards__item__link">
                 <figure className="cards__item__pic-wrap" data-category="Experience">
-                  <video
-                    ref={videoRef}
-                    className="cards__item__img"
-                    onClick={handleVideoClick} // ✅ Click to Play/Pause
-                    controls // ✅ Show Play/Pause Button
-                  >
-                    <source src="/videos/sherry.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                <video
+  className="cards__item__img"
+  onClick={handleVideoClick}
+  controls
+  // poster="/videos/thumbnail.jpg" // ✅ Adds the thumbnail before playing
+>
+  <source src="/videos/sherry.mp4" type="video/mp4" />
+</video>
+
                 </figure>
                 <div className="cards__item__info">
                   <h5 className="cards__item__text">Our Pastor</h5>
