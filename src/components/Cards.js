@@ -4,8 +4,7 @@ import './Cards.css';
 function Cards() {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
-
-  // ✅ Toggle Play/Pause on Click
+  
   const handleVideoClick = () => {
     if (videoRef.current) {
       if (isPlaying) {
@@ -16,34 +15,34 @@ function Cards() {
       setIsPlaying(!isPlaying);
     }
   };
-
   return (
-    <div className='cards'>
-      {/* ✅ Full-Screen Video Section */}
-      <div className='video-card'>
-        <video className='full-screen-video' autoPlay loop muted>
-          <source src='/videos/worship.mp4' type='video/mp4' />
+    <div className="cards">
+      {/* Full-Screen Video Section */}
+      <div className="video-card">
+        <video className="full-screen-video" autoPlay loop muted>
+          <source src="/videos/worship.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
 
-   {/* ✅ Cards Section */}
-   <div className='cards__container'>
-        <div className='cards__wrapper'>
-          {/* ✅ First Card - Playable Video */}
-          <ul className='cards__items'>
+      {/* Cards Section */}
+      <div className="cards__container">
+        <div className="cards__wrapper">
+          {/* First Card - Playable Video */}
+          <ul className="cards__items">
             <li className="cards__item">
               <div className="cards__item__link">
                 <figure className="cards__item__pic-wrap" data-category="Experience">
-                <video
-  className="cards__item__img"
-  onClick={handleVideoClick}
-  controls
-  // poster="/videos/thumbnail.jpg" // ✅ Adds the thumbnail before playing
->
-  <source src="/videos/sherry.mp4" type="video/mp4" />
-</video>
-
+                  <video
+                    ref={videoRef} // Attach ref to sherry video
+                    className="cards__item__img" // Keep class for styling
+                    onClick={handleVideoClick} // Toggle play/pause
+                    controls // Built-in controls
+                    // poster="/videos/thumbnail.jpg" // Optional thumbnail
+                  >
+                    <source src="/videos/sherry.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </figure>
                 <div className="cards__item__info">
                   <h5 className="cards__item__text">Our Pastor</h5>
@@ -52,8 +51,8 @@ function Cards() {
             </li>
           </ul>
 
-          {/* ✅ Second Row of Cards */}
-          <ul className='cards__items'>
+          {/* Second Row of Cards */}
+          <ul className="cards__items">
             <li className="cards__item">
               <div className="cards__item__link">
                 <figure className="cards__item__pic-wrap" data-category="Adventure">
