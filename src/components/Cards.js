@@ -27,10 +27,10 @@ function Cards() {
         </video>
       </div>
 
-      {/* ✅ Cards Section */}
-      <div className='cards__container'>
+   {/* ✅ Cards Section */}
+   <div className='cards__container'>
         <div className='cards__wrapper'>
-          {/* ✅ First Card - Video */}
+          {/* ✅ First Card - Playable Video */}
           <ul className='cards__items'>
             <li className="cards__item">
               <div className="cards__item__link">
