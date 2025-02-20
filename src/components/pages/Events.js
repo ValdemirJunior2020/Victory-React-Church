@@ -5,7 +5,7 @@ const Events = () => {
   return (
     <div className="container mt-5 p-4 bg-light shadow rounded">
       {/* Page Title */}
-      <h1 className="text-center text-primary fw-bold">Upcoming Church Events</h1>
+      <h1 className="text-center text-primary fw-bold">Church Events</h1>
 
       {/* Victory Family Night */}
       <div className="mt-4 p-3 border rounded bg-white">
@@ -28,12 +28,12 @@ const Events = () => {
         </p>
       </div>
 
-      {/* Speaker Section */}
+      {/* Speaker Section (Moved Inside the Return) */}
       <div className="mt-4 p-3 border rounded bg-white">
         <h3 className="fw-semibold">Guest Speaker: Jeff Ferguson</h3>
         <p>Coming <strong>Tue. Feb. 11th</strong></p>
         <img
-          src="/path-to-jeff-ferguson-image.jpg"
+          src="/images/Jeff.jpg"
           alt="Jeff Ferguson"
           className="rounded-circle shadow-sm mt-2"
           width="100"
