@@ -30,26 +30,26 @@ function Cards() {
         <div className="cards__wrapper">
           {/* First Card - Playable Video */}
           <ul className="cards__items">
-            <li className="cards__item">
-              <div className="cards__item__link">
-                <figure className="cards__item__pic-wrap" data-category="Experience">
-                  <video
-                    ref={videoRef} // Attach ref to sherry video
-                    className="cards__item__img" // Keep class for styling
-                    onClick={handleVideoClick} // Toggle play/pause
-                    controls // Built-in controls
-                    // poster="/videos/thumbnail.jpg" // Optional thumbnail
-                  >
-                    <source src="/videos/sherry.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </figure>
-                <div className="cards__item__info">
-                  <h5 className="cards__item__text">Our Pastor</h5>
-                </div>
-              </div>
-            </li>
-          </ul>
+  <li className="cards__item sherry-card"> {/* Add sherry-card class */}
+    <div className="cards__item__link">
+      <figure className="cards__item__pic-wrap" data-category="Experience">
+        <video
+          ref={videoRef}
+          className="cards__item__img sherry-video" // Add sherry-video class
+          onClick={handleVideoClick}
+          controls
+          poster="/images/thumbnail.jpg"
+        >
+          <source src="/videos/sherry.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </figure>
+      <div className="cards__item__info">
+        <h5 className="cards__item__text">Our Pastor</h5>
+      </div>
+    </div>
+  </li>
+</ul>
 
           {/* Second Row of Cards */}
           <ul className="cards__items">
@@ -59,7 +59,7 @@ function Cards() {
                   <img className="cards__item__img" src="/images/img-9.jpg" alt="Adventure" />
                 </figure>
                 <div className="cards__item__info">
-                  <h5 className="cards__item__text">Explore the hidden waterfall deep inside the Amazon Jungle</h5>
+                  <h5 className="cards__item__text">Our Church</h5>
                 </div>
               </div>
             </li>
@@ -69,7 +69,7 @@ function Cards() {
                   <img className="cards__item__img" src="/images/img-3.jpg" alt="Mystery" />
                 </figure>
                 <div className="cards__item__info">
-                  <h5 className="cards__item__text">Set Sail in the Atlantic Ocean visiting Uncharted Waters</h5>
+                  <h5 className="cards__item__text">Text Number: (833) 562-3105 Keyword: victoryworship</h5>
                 </div>
               </div>
             </li>
@@ -79,7 +79,8 @@ function Cards() {
                   <img className="cards__item__img" src="/images/img-4.jpg" alt="Himalayan Adventure" />
                 </figure>
                 <div className="cards__item__info">
-                  <h5 className="cards__item__text">Experience Football on Top of the Himalayan Mountains</h5>
+                  <h5 className="cards__item__text">Text Number: (833) 562-3105
+                  Keyword: victoryworship</h5>
                 </div>
               </div>
             </li>

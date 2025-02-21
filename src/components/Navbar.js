@@ -14,7 +14,7 @@ function Navbar() {
       <div className="navbar-container">
         {/* ✅ Logo (Modify this if needed) */}
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-         
+          Victory Worship
         </Link>
 
         {/* ✅ Mobile Menu Icon */}
@@ -54,6 +54,11 @@ function Navbar() {
             >
               New Member
             </a>
+          </li>
+          <li className="nav-item">
+            <Link to="/donate" className="nav-links" onClick={closeMobileMenu}>
+              Donate
+            </Link>
           </li>
         </ul>
       </div>

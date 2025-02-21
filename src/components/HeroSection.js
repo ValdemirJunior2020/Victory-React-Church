@@ -9,7 +9,7 @@ function HeroSection() {
   return (
     <div className="hero-container">
       <video src="/videos/worship.mp4" autoPlay loop muted playsInline />
-      <h1>Welcome to Victory Worship  Center</h1>
+      <h2>Welcome to Victory Worship  Center</h2>
       <p>Come visit us!</p>
       <div className="hero-icons">
         <a 

@@ -63,7 +63,7 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw; /* Full viewport width */
+  width: 110vw; /* Full viewport width */
   height: 100%; /* Fills wrapper height */
   object-fit: cover; /* Ensures it fills the space */
   display: block;
@@ -93,4 +93,33 @@ h1 {
 
 .cards__item__text {
   text-align: center; /* Ensures text is centered */
+}
+.sherry-video {
+  width: 120vw; /* Wider */
+  top: -50px; /* Moved up */
+  left: -15px; /* Adjusted */
+}
+/* Make the sherry video bigger */
+.sherry-video {
+  width: 100vw; /* Increase video width */
+  height: 110%; /* Slightly taller to match aspect ratio, adjust as needed */
+}
+
+/* Style the sherry card - Move it up */
+.sherry-card {
+  width: 120vw; /* Keep it wider */
+  top: -95px; /* Move the entire card (and video) up more than the default -20px */
+  left: -20px; /* Keep the card’s default left shift, no additional left movement */
+  margin: 0 auto; /* Center it horizontally */
+}
+
+/* Ensure the pic-wrap container accommodates the larger video */
+.sherry-card .cards__item__pic-wrap {
+  width: 100vw; /* Match the video width */
+  padding-top: 60%; /* Adjust aspect ratio (e.g., 120vw * 9/16) */
+}
+
+/* Ensure the link wrapper doesn’t constrain the size */
+.sherry-card .cards__item__link {
+  width: 100vw; /* Match the card width */
 }

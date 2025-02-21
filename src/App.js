@@ -8,7 +8,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Services from "./components/pages/Services";
 import Products from "./components/pages/Products";
 import SignUp from "./components/pages/SignUp";
-import Events from "./components/pages/Events";  // ✅ Import the Events page
+import Events from "./components/pages/Events";
+import Donate from "./components/pages/Donate";  // ✅ Import Donate page
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
         <Route path="/services" component={Services} />
         <Route path="/products" component={Products} />
         <Route path="/sign-up" component={SignUp} />
-        <Route path="/events" component={Events} />  {/* ✅ Add the Events route */}
+        <Route path="/events" component={Events} />
+        <Route path="/donate" component={Donate} />  {/* ✅ Add Donate route */}
       </Switch>
     </Router>
   );
