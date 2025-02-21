@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaYoutube } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import '../App.css';
 import './HeroSection.css';
 
@@ -7,9 +8,14 @@ function HeroSection() {
   console.log("Rendering HeroSection");
 
   return (
-    <div className="hero-container">
+    <motion.div 
+      className="hero-container"
+      initial={{ scale: 0.7, opacity: 0 }} // Starts more zoomed out
+      animate={{ scale: 1, opacity: 1 }} // Zooms in and fades in
+      transition={{ duration: 2.5, ease: "easeOut" }} // Slower effect (2.5s)
+    >
       <video src="/videos/worship.mp4" autoPlay loop muted playsInline />
-      <h2>Welcome to Victory Worship  Center</h2>
+      <h2>Welcome to Victory Worship Center</h2>
       <p>Come visit us!</p>
       <div className="hero-icons">
         <a 
@@ -29,7 +35,7 @@ function HeroSection() {
           <FaYoutube />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
