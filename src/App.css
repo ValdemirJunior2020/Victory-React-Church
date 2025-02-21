@@ -77,4 +77,24 @@
   margin-bottom: 5px;
   font-weight: bold;
 }
+.contact-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.contact-container h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.contact-container p {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.map-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
 

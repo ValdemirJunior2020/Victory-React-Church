@@ -10,6 +10,7 @@ import Products from "./components/pages/Products";
 import SignUp from "./components/pages/SignUp";
 import Events from "./components/pages/Events";
 import Donate from "./components/pages/Donate";  // ✅ Import Donate page
+import Contact from "./components/pages/Contact"; // Import Contact Page
 
 function App() {
   return (
@@ -22,10 +23,12 @@ function App() {
         <Route path="/products" component={Products} />
         <Route path="/sign-up" component={SignUp} />
         <Route path="/events" component={Events} />
-        <Route path="/donate" component={Donate} />  {/* ✅ Add Donate route */}
+        <Route path="/donate" component={Donate} />
+        <Route path="/contact" component={Contact} /> {/* ✅ Add Contact Route */}
       </Switch>
     </Router>
   );
 }
+
 
 export default App;
