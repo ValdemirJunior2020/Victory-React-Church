@@ -14,7 +14,7 @@ function Navbar() {
       <div className="navbar-container">
         {/* ✅ Logo (Modify this if needed) */}
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          Victory Worship
+        <img src="/images/logo.png" alt="Victory Worship Logo" className="logo-image" />
         </Link>
 
         {/* ✅ Mobile Menu Icon */}
