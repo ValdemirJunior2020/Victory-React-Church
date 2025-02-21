@@ -31,13 +31,13 @@ h1 {
 
 .cards__item {
   display: flex;
-  width: 100vw; /* Full viewport width */
-  margin: 5px 0 24px 0; /* Adds 40px padding/top margin above the card, keeps bottom margin */
+  width: 100vw;
+  margin: 5px 0 24px 0;
   border-radius: 10px;
   position: relative;
-  left: -20px; /* Keeps it moved left */
-  top: -20px; /* Keeps it moved up */
-  z-index: 1; /* Ensures card is above other elements */
+  left: -25px;
+  top: -40px; /* Moves it up 30px instead of 20px */
+  z-index: 1;
 }
 
 .cards__item__link {
