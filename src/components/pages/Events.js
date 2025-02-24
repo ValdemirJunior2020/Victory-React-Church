@@ -1,50 +1,45 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./Events.css"; // ✅ Correct path since it's in the same folder
+
 
 const Events = () => {
   return (
-    <div className="container mt-5 p-4 bg-light shadow rounded">
+    <div className="events-container">
       {/* Page Title */}
-      <h1 className="text-center text-primary fw-bold">Church Events</h1>
+      <h1 className="events-title">Victory Worship Center</h1>
 
       {/* Victory Family Night */}
-      <div className="mt-4 p-3 border rounded bg-white">
-        <h2 className="fw-bold">VICTORY FAMILY NIGHT</h2>
-        <p>
-          <strong>Wed., February 5th</strong> | Dinner <strong>5:30-6:15</strong> | Classes <strong>6:30-7:30</strong>
+      <div className="event-card">
+        <h2 className="event-header text-primary">VICTORY FAMILY NIGHT</h2>
+        <p className="event-text">
+          <span className="event-highlight">Wed., March 5th</span>
         </p>
-        <p className="text-muted">A GROUP FOR EVERYONE!</p>
+        <p className="event-text">Join us for a fun-filled evening with activities for all ages!</p>
       </div>
 
-      {/* Love Lake Worth */}
-      <div className="mt-4 p-3 border rounded bg-white">
-        <h2 className="text-danger fw-bold">LOVE LAKE WORTH</h2>
-        <p>Next event: <strong>Feb. 8th</strong></p>
-        <p>
-          Sign up at{" "}
-          <a href="http://www.lovelakeworth.com" className="text-primary fw-bold">
-            www.lovelakeworth.com
-          </a>
+      {/* Weekly Events */}
+      <div className="event-card">
+        <h3 className="event-header text-success">What's Happening This Week</h3>
+        <p className="event-text text-primary">TUESDAY EXPERIENCE - 7 PM</p>
+        <p className="event-text text-danger">THURSDAY MORNING CHAT - 8:30 AM (Live on Facebook)</p>
+      </div>
+
+      {/* Youth & Group Activities */}
+      <div className="event-card">
+        <h3 className="event-header text-secondary">Weekly Activities</h3>
+        <p className="event-text"><strong>Wacky Wednesday (6:30-7:30 PM)</strong> - Fun for kids aged 6-12</p>
+        <p className="event-text"><strong>Women's Group (6:30-7:30 PM)</strong> - Fellowship and support</p>
+        <p className="event-text"><strong>Man Up (Men's Group)</strong> - Leadership and faith building</p>
+      </div>
+
+      {/* Youth Release Information */}
+      <div className="event-card">
+        <h3 className="event-header text-info">Youth Dismissal</h3>
+        <p className="event-text">Youth will be dismissed after worship.</p>
+        <p className="event-text">
+          Students will be released at <span className="event-highlight">11:15 AM</span>. Please wait for them.
         </p>
-      </div>
-
-      {/* Speaker Section (Moved Inside the Return) */}
-      <div className="mt-4 p-3 border rounded bg-white">
-        <h3 className="fw-semibold">Guest Speaker: Jeff Ferguson</h3>
-        <p>Coming <strong>Tue. Feb. 11th</strong></p>
-        <img
-          src="/images/Jeff.jpg"
-          alt="Jeff Ferguson"
-          className="rounded-circle shadow-sm mt-2"
-          width="100"
-        />
-      </div>
-
-      {/* Events This Week */}
-      <div className="mt-4 p-3 border rounded bg-white">
-        <h2 className="fw-semibold text-secondary">WHAT'S HAPPENING THIS WEEK</h2>
-        <p className="fs-5 fw-bold text-primary">TUESDAY EXPERIENCE - 7 PM</p>
-        <p className="fs-5 fw-bold text-danger">THURSDAY MORNING CHAT - 8:30 AM (Live on Facebook)</p>
       </div>
     </div>
   );

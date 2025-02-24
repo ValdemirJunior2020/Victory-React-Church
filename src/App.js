@@ -9,8 +9,9 @@ import Services from "./components/pages/Services";
 import Products from "./components/pages/Products";
 import SignUp from "./components/pages/SignUp";
 import Events from "./components/pages/Events";
-import Donate from "./components/pages/Donate";  // ✅ Import Donate page
-import Contact from "./components/pages/Contact"; // Import Contact Page
+import Donate from "./components/pages/Donate";
+import Contact from "./components/pages/Contact";
+import PrayerGroup from "./components/pages/PrayerGroup"; // ✅ Import Prayer Group Page
 
 function App() {
   return (
@@ -24,11 +25,11 @@ function App() {
         <Route path="/sign-up" component={SignUp} />
         <Route path="/events" component={Events} />
         <Route path="/donate" component={Donate} />
-        <Route path="/contact" component={Contact} /> {/* ✅ Add Contact Route */}
+        <Route path="/contact" component={Contact} />
+        <Route path="/prayer-group" component={PrayerGroup} /> {/* ✅ Add Prayer Group Route */}
       </Switch>
     </Router>
   );
 }
-
 
 export default App;

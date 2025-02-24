@@ -14,7 +14,7 @@ function Navbar() {
       <div className="navbar-container">
         {/* ✅ Logo (Modify this if needed) */}
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-        <img src="/images/logo.png" alt="Victory Worship Logo" className="logo-image" />
+          <img src="/images/logo.png" alt="Victory Worship Logo" className="logo-image" />
         </Link>
 
         {/* ✅ Mobile Menu Icon */}
@@ -37,6 +37,11 @@ function Navbar() {
           <li className="nav-item">
             <Link to="/events" className="nav-links" onClick={closeMobileMenu}>
               Events
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/prayer-group" className="nav-links" onClick={closeMobileMenu}>
+              Prayer Group
             </Link>
           </li>
           <li className="nav-item">
