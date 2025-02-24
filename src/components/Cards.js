@@ -34,16 +34,19 @@ function Cards() {
             <li className="cards__item sherry-card">
               <div className="cards__item__link">
                 <figure className="cards__item__pic-wrap" data-category="Experience">
-                  <video
-                    ref={videoRef}
-                    className="cards__item__img sherry-video"
-                    onClick={handleVideoClick}
-                    controls
-                    poster="/images/thumbnail.jpg"
-                  >
-                    <source src="/videos/sherry.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                <video
+  ref={videoRef}
+  className="cards__item__img sherry-video"
+  onClick={handleVideoClick}  // Make sure it's actually used here
+  controls
+  poster="/images/thumbnail.jpg"
+>
+  <source src="/videos/sherry.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+
+
                 </figure>
                 <div className="cards__item__info">
                   <h5 className="cards__item__text">Our Pastor</h5>

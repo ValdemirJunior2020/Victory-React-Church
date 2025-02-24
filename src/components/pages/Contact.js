@@ -12,7 +12,7 @@ const Contact = () => {
     <div className="contact-container">
       <h1>Victory Worship Center Church</h1>
       <p><strong>Address:</strong> 1915 N A St, Lake Worth Beach, FL 33460</p>
-      <p><strong>Phone:</strong> (561) 585-0130</p>
+      <p><strong>Phone:</strong> (561) 585-0130 - email: example@gmail.com</p>
 
       {/* Google Map Embed */}
       <div className="map-container">

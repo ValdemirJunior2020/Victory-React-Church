@@ -9,7 +9,7 @@ function About() {
       <nav className="navbar navbar-light">
         <div className="container-fluid">
           <Link className="navbar-brand text-white" to="/">
-            Church
+            
           </Link>
           <button
             className="navbar-toggler"
