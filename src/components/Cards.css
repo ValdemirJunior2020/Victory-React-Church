@@ -1,49 +1,55 @@
+/* Main container styling */
 .cards {
   padding: 4rem;
   background: #fff;
-  width: 100vw;
+  width: 100%;
 }
 
+/* Centered title */
 h1 {
   text-align: center;
 }
 
+/* Cards container */
 .cards__container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 100%;
-  width: 100vw;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
+/* Cards wrapper */
 .cards__wrapper {
   position: relative;
   margin: 50px 0 45px;
-  width: 100vw;
+  width: 100%;
 }
 
+/* Cards layout */
 .cards__items {
   display: flex;
   flex-direction: column;
-  width: 95vw;
+  width: 95%;
 }
 
+/* Ensure all cards take full width but remain centered */
 .cards__item {
-  display: flex;
-  width: 100vw;
-  margin: 5px 0 24px 0;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
   border-radius: 10px;
-  position: relative;
-  left: -25px;
-  top: -40px; /* Moves it up 30px instead of 20px */
-  z-index: 1;
+  overflow: hidden;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Card content wrapper */
 .cards__item__link {
   display: flex;
   flex-direction: column;
-  width: 110vw;
+  width: 100%;
   box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
   -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
   filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -53,73 +59,70 @@ h1 {
 }
 
 .cards__item__pic-wrap {
+  width: 100%;
+  height: auto;
   position: relative;
-  width: 100vw; /* Full viewport width */
-  padding-top: 56.25%; /* Maintains 16:9 aspect ratio */
-  overflow: visible; /* Prevents clipping of video controls */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
+/* Ensure video and images take full card size without cropping */
+.cards__item__img,
 .cards__item__pic-wrap video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 110vw; /* Full viewport width */
-  height: 100%; /* Fills wrapper height */
-  object-fit: cover; /* Ensures it fills the space */
-  display: block;
-  cursor: pointer; /* Ensures clickability */
-  z-index: 2; /* Brings video above other layers */
-}
-/* General styling for images and videos with .cards__item__img */
-.cards__item__img {
-  position: absolute; /* Aligns with parent wrapper */
-  top: 0;
-  left: 0;
-  width: 100vw; /* Full viewport width */
-  height: 100%; /* Matches wrapper height */
-  object-fit: cover; /* Ensures full coverage */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
-.cards__item__pic-wrap video:hover,
-.cards__item__pic-wrap img:hover {
-  transform: scale(1.05); /* Hover effect */
+/* Adjustments specific to the Sherry card */
+.sherry-card {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -110px; /* Adjust the value to move the card up */
 }
+
+.sherry-card .cards__item__pic-wrap {
+  width: 100%;
+  height: 450px; /* Match other cards */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: -10px; /* Adjust this value as needed */
+}
+
+/* Ensure Sherry's video takes full size of the card */
+.sherry-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ensure text in all cards is centered and readable */
 .cards__item__info {
   display: flex;
-  justify-content: center; /* Centers text horizontally */
-  align-items: center; /* Centers text vertically */
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+}
+.sherry-card .cards__item__info {
+  color: #b8860b; /* Dark yellow */
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.cards__item__text {
-  text-align: center; /* Ensures text is centered */
-}
-.sherry-video {
-  width: 120vw; /* Wider */
-  top: -50px; /* Moved up */
-  left: -15px; /* Adjusted */
-}
-/* Make the sherry video bigger */
-.sherry-video {
-  width: 100vw; /* Increase video width */
-  height: 110%; /* Slightly taller to match aspect ratio, adjust as needed */
-}
-
-/* Style the sherry card - Move it up */
-.sherry-card {
-  width: 120vw; /* Keep it wider */
-  top: -95px; /* Move the entire card (and video) up more than the default -20px */
-  left: -20px; /* Keep the card’s default left shift, no additional left movement */
-  margin: 0 auto; /* Center it horizontally */
-}
-
-/* Ensure the pic-wrap container accommodates the larger video */
-.sherry-card .cards__item__pic-wrap {
-  width: 100vw; /* Match the video width */
-  padding-top: 60%; /* Adjust aspect ratio (e.g., 120vw * 9/16) */
-}
-
-/* Ensure the link wrapper doesn’t constrain the size */
-.sherry-card .cards__item__link {
-  width: 100vw; /* Match the card width */
-}
