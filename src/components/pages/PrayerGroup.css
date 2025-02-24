@@ -43,4 +43,13 @@
     display: block;
     margin: 10px auto; /* Center the image */
   }
-  
+  .text-to-give-img {
+    width: 80px;  /* Set smaller width */
+    height: auto;  /* Maintain aspect ratio */
+    display: block;
+    margin: 10px auto; /* Center the image */
+    max-height: 80px;  /* Ensure it doesn't stretch */
+    object-fit: contain; /* Prevent distortion */
+}
+
+

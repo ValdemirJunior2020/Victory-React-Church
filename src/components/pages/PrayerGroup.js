@@ -59,7 +59,8 @@ const PrayerGroup = () => {
         {/* Text to Give Card */}
         <div className="col-md-6">
           <div className="card prayer-card">
-            <img src="/images/text-to-give.jpg" className="card-img-top" alt="Text to Give" />
+          <img src="/images/text-to-give.jpg" className="card-img-top text-to-give-img" alt="Text to Give" />
+
             <div className="card-body">
               <h5 className="card-title text-warning">Text to Give</h5>
               <p className="card-text">Support our mission easily by texting:</p>
