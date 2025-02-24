@@ -19,7 +19,14 @@ function Cards() {
     <div className="cards">
       {/* Full-Screen Video Section */}
       <div className="video-card">
-        <video className="full-screen-video" autoPlay loop muted>
+        <video 
+          className="full-screen-video" 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          preload="auto"
+        >
           <source src="/videos/worship.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
