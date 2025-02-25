@@ -42,19 +42,20 @@ const PrayerGroup = () => {
 </div>
 
 
-        {/* Victory Worship Center Card */}
-        <div className="col-md-6">
-          <div className="card prayer-card">
-            <img src="/images/victory-worship.jpg" className="card-img-top" alt="Victory Worship" />
-            <div className="card-body">
-              <h5 className="card-title text-info">Victory Worship Center</h5>
-              <p className="card-text">
-                "Moving in the Spirit" - Join us in worship and spiritual growth.
-              </p>
-              <p className="card-text">For more details, visit our website or attend our services.</p>
-            </div>
-          </div>
-        </div>
+ {/* Victory Worship Center Card */}
+<div className="col-md-6">
+  <div className="card prayer-card">
+    <img src="/images/victory.jpg" className="card-img-top" alt="Victory Worship" />
+    <div className="card-body">
+      <h5 className="card-title text-info">Victory Worship Center</h5>
+      <p className="card-text">
+        "Moving in the Spirit" - Join us in worship and spiritual growth.
+      </p>
+      <p className="card-text">For more details, visit our website or attend our services.</p>
+    </div>
+  </div>
+</div>
+
 
         {/* Text to Give Card */}
         <div className="col-md-6">

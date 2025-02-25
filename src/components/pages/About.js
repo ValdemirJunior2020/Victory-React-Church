@@ -1,6 +1,8 @@
 import React from "react";
-import "./About.css"; // ✅ Import the CSS file
+import "./About.css"; // ✅ Import CSS
 import { Link } from "react-router-dom";
+
+
 
 function About() {
   return (
@@ -9,7 +11,7 @@ function About() {
       <nav className="navbar navbar-light">
         <div className="container-fluid">
           <Link className="navbar-brand text-white" to="/">
-            
+            Victory Worship
           </Link>
           <button
             className="navbar-toggler"
@@ -28,14 +30,10 @@ function About() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav text-center">
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
-                About Us
-              </Link>
+              <Link className="nav-link" to="/about">About Us</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/">
-                Home
-              </Link>
+              <Link className="nav-link" to="/">Home</Link>
             </li>
             <li className="nav-item">
               <a
@@ -51,14 +49,6 @@ function About() {
         </div>
       </nav>
 
-      {/* ✅ Video Background */}
-      <div className="video-container">
-        <video autoPlay loop muted playsInline>
-          
-          Your browser does not support the video tag. 
-        </video>
-      </div>
-
       {/* ✅ About Content */}
       <div className="about-content">
         <h1>About Us</h1>
@@ -70,7 +60,9 @@ function About() {
         </p>
 
         <h2>Greatest Commandment</h2>
-        <p>To love the Lord thy God with all your heart, with all your soul, with all your mind, with all your strength and to love your neighbor as yourself.</p>
+        <p>
+          To love the Lord thy God with all your heart, with all your soul, with all your mind, with all your strength and to love your neighbor as yourself.
+        </p>
 
         <h2>What the Church Is and What We Believe</h2>
         <p>
