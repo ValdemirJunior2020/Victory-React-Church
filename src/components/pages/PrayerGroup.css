@@ -33,11 +33,13 @@
     text-align: center;
   }
   .small-image {
-    width: 150px;  /* Adjust the width (change this as needed) */
-    height: auto;  /* Maintain aspect ratio */
+    width: 250px; /* Set a smaller width */
+    height: auto; /* Maintain aspect ratio */
     display: block;
-    margin: 10px auto; /* Center the image */
+    margin: 5px auto; /* Center the image */
+    object-fit: contain; /* Prevent cropping */
   }
+  
   .bible-image {
     width: 80px;  /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
